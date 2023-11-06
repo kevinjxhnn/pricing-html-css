@@ -12,24 +12,107 @@
       href="./images/favicon-32x32.png"
     />
 
+    <link rel="stylesheet" href="./page.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Pricing component</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
+
   <body>
-    Our Pricing Annually Monthly Basic &dollar;19.99 &dollar;199.99 500 GB
-    Storage 2 Users Allowed Send up to 3 GB Learn More Professional
-    &dollar;24.99 &dollar;249.99 1 TB Storage 5 Users Allowed Send up to 10 GB
-    Learn More Master &dollar;39.99 &dollar;399.99 2 TB Storage 10 Users Allowed
-    Send up to 20 GB Learn More
+    <div class="container">
+      <div class="top-img">
+        <img src="./images/bg-top.svg" alt="curved blue lines" />
+      </div>
+      <div class="pricing">
+        <h4>Our Pricing</h4>
+      </div>
+
+      <div class="billing">
+        <span>Annually &nbsp</span>
+        <label class="switch">
+          <input
+            type="checkbox"
+            onchange="getBillingModels()"
+            class="messageCheckbox"
+            checked
+          />
+          <span class="slider round"></span>
+        </label>
+        <span>&nbsp Monthly</span>
+      </div>
+      <div class="three-pricing-models">
+        <div class="basic card">
+          <ul>
+            <li>Basic</li>
+            <li class="price-amount" id="basic-amount">$ 19.99</li>
+            <hr />
+            <li>500 GB Storage</li>
+            <hr />
+            <li>2 Users Allowed</li>
+            <hr />
+            <li>Send upto 3 GB</li>
+            <hr />
+            <li><button>LEARN MORE</button></li>
+          </ul>
+        </div>
+
+        <div class="professional card">
+          <ul>
+            <li>Professional</li>
+            <li class="price-amount" id="professional-amount">$ 24.99</li>
+            <hr />
+            <li>1 TB Storage</li>
+            <hr />
+            <li>5 Users Allowed</li>
+            <hr />
+            <li>Send upto 10 GB</li>
+            <hr />
+            <li><button>LEARN MORE</button></li>
+          </ul>
+        </div>
+
+        <div class="master card">
+          <ul>
+            <li>Master</li>
+            <li class="price-amount" id="master-amount">$ 39.99</li>
+            <hr />
+            <li>2 TB Storage</li>
+            <hr />
+            <li>10 Users Allowed</li>
+            <hr />
+            <li>Send upto 20 GB</li>
+            <hr />
+            <li><button>LEARN MORE</button></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bot-img">
+        <img src="./images/bg-bottom.svg" alt="Flowers" />
+      </div>
+    </div>
+
+    <script>
+      function getBillingModels() {
+        if (!document.querySelector(".messageCheckbox").checked) {
+          document.getElementById("basic-amount").innerHTML = "$ 199.99";
+          document.getElementById("professional-amount").innerHTML = "$ 249.99";
+          document.getElementById("master-amount").innerHTML = "$ 399.99";
+        } else {
+          document.getElementById("basic-amount").innerHTML = "$ 19.99";
+          document.getElementById("professional-amount").innerHTML = "$ 24.99";
+          document.getElementById("master-amount").innerHTML = "$ 39.99";
+        }
+      }
+
+      getBillingModels();
+    </script>
   </body>
 </html>
