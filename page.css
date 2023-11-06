@@ -193,6 +193,11 @@ button {
   background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
 }
 
+.card:hover button {
+  background: white;
+  color: #7d81e3; 
+}
+
 @media (max-width: 810px) {
   .three-pricing-models {
     flex-direction: column; 
