@@ -17,6 +17,7 @@
   position: absolute;
   top: 0;
   right: 0;
+  z-index: -1;
 }
 
 .pricing {
@@ -24,12 +25,13 @@
   font-weight: bold;
   font-size: 150%;
   text-align: center;
+  z-index: 1;
 }
 
 body {
   width: 100vw;
   height: 100vh;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #6c6e85;
   overflow-x: hidden;
   background-color: hsl(240, 78%, 98%);
@@ -58,9 +60,9 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(180deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%)); 
-  -webkit-transition: .4s;
-  transition: .4s;
+  background: linear-gradient(180deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .slider:before {
@@ -71,8 +73,8 @@ body {
   left: 2px;
   bottom: 2px;
   background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 input:checked + .slider {
@@ -82,7 +84,6 @@ input:checked + .slider {
 input:focus + .slider {
   box-shadow: 0 0 1px hsl(236, 72%, 79), 0 0 1px hsl(237, 63%, 64);
 }
-
 
 input:checked + .slider:before {
   -webkit-transform: translateX(26px);
@@ -99,7 +100,7 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-.billing{
+.billing {
   margin-top: 30px;
   margin-bottom: 20px;
   display: flex;
@@ -112,7 +113,6 @@ text {
 
 ul {
   list-style-type: none;
-
 }
 
 li {
@@ -120,18 +120,16 @@ li {
 }
 
 hr {
-  border: none; 
+  border: none;
   border-top: 0.1px solid #efefef;
   margin: 0 auto;
-  width: 70%; /
-  
+  width: 70%;
 }
 
 .grey-text {
   color: #b1b1be;
   margin-top: 2px;
 }
-
 
 .card:hover {
   background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
@@ -140,8 +138,6 @@ hr {
   transform: scale(1.05);
   transition: transform 0.3s;
 }
-
-
 
 .three-pricing-models {
   margin-top: 3%;
@@ -155,17 +151,16 @@ hr {
   font-size: 50px;
 }
 
-
 .basic,
 .professional,
 .master {
-    background-color: white;
-    height: 450px;
-    width: 300px;
-    border-radius: 8px;
-    gap: 2px;
-    font-weight: bold;
-    text-align: center;
+  background-color: white;
+  height: 450px;
+  width: 300px;
+  border-radius: 8px;
+  gap: 2px;
+  font-weight: bold;
+  text-align: center;
 }
 
 .basic {
@@ -195,18 +190,18 @@ button {
 
 .card:hover button {
   background: white;
-  color: #7d81e3; 
+  color: #7d81e3;
 }
 
 @media (max-width: 810px) {
   .three-pricing-models {
-    flex-direction: column; 
+    flex-direction: column;
   }
 
   .professional {
     margin-top: 12px;
   }
-  
+
   .master {
     margin-top: 12px;
   }
