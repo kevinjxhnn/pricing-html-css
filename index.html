@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
     <link
       rel="icon"
@@ -34,7 +33,7 @@
       </div>
 
       <div class="billing">
-        <span>Annually &nbsp</span>
+        <span class="grey-text">Annually &nbsp</span>
         <label class="switch">
           <input
             type="checkbox"
@@ -44,7 +43,7 @@
           />
           <span class="slider round"></span>
         </label>
-        <span>&nbsp Monthly</span>
+        <span class="grey-text">&nbsp Monthly</span>
       </div>
       <div class="three-pricing-models">
         <div class="basic card">
@@ -101,13 +100,13 @@
     <script>
       function getBillingModels() {
         if (!document.querySelector(".messageCheckbox").checked) {
-          document.getElementById("basic-amount").innerHTML = "$ 199.99";
-          document.getElementById("professional-amount").innerHTML = "$ 249.99";
-          document.getElementById("master-amount").innerHTML = "$ 399.99";
+          document.getElementById("basic-amount").innerText = "$ 199.99";
+          document.getElementById("professional-amount").innerText = "$ 249.99";
+          document.getElementById("master-amount").innerText = "$ 399.99";
         } else {
-          document.getElementById("basic-amount").innerHTML = "$ 19.99";
-          document.getElementById("professional-amount").innerHTML = "$ 24.99";
-          document.getElementById("master-amount").innerHTML = "$ 39.99";
+          document.getElementById("basic-amount").innerText = "$ 19.99";
+          document.getElementById("professional-amount").innerText = "$ 24.99";
+          document.getElementById("master-amount").innerText = "$ 39.99";
         }
       }
 

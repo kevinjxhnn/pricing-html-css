@@ -127,6 +127,11 @@ hr {
   
 }
 
+.grey-text {
+  color: #b1b1be;
+  margin-top: 2px;
+}
+
 
 .card:hover {
   background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
@@ -139,7 +144,7 @@ hr {
 
 
 .three-pricing-models {
-  margin-top: 2%;
+  margin-top: 3%;
   display: flex;
   justify-content: center;
   align-items: center;
